@@ -1,0 +1,7 @@
+.idea
+target
+.DS_Store
+build
+runtime
+personal_vars
+venv

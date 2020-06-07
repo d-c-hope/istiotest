@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp1-deployment
+  labels:
+    app: webapp1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: webapp1
+  template:
+    metadata:
+      labels:
+        app: webapp1
+    spec:
+      containers:
+      - name: webapp1
+        image: basicpywebapp:0.01
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8001
+        env:
+          - name: SERVER2
+            value: "webapp1-service"
