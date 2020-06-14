@@ -1,0 +1,12 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: webapp2
+spec:
+  hosts:
+  - webapp2-service.app2ns.svc.cluster.local
+  http:
+  - route:
+    - destination:
+        host: webapp2-service.app2ns.svc.cluster.local
+#        subset: v1

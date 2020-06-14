@@ -9,7 +9,7 @@ server2 = os.getenv('SERVER2')
 @app.route("/app1")
 async def test(request):
     async with aiohttp.ClientSession() as session:
-        async with session.get('{}/app1'.format(server2)) as resp:
+        async with session.get('{}/app2'.format(server2)) as resp:
             resJSON = await resp.json()
             print(resJSON)
             # resJSON.update({"servername": "app1"})

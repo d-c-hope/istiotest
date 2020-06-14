@@ -15,8 +15,8 @@ spec:
         app: webapp2
     spec:
       containers:
-      - name: webapp1
-        image: basicpywebapp:0.01
+      - name: webapp2
+        image: basicpywebapp2:0.01
         imagePullPolicy: Never
         ports:
         - containerPort: 8001

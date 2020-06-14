@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: webapp1
-        image: basicpywebapp:0.01
+        image: basicpywebapp:0.021
         imagePullPolicy: Never
         ports:
         - containerPort: 8001
         env:
           - name: SERVER2
-            value: "webapp1-service"
+            value: "http://webapp2-service.app2ns.svc.cluster.local:8002"

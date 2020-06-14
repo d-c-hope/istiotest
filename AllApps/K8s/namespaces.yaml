@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: List
+items:
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: app1ns
+    labels:
+      name: app1ns
+- apiVersion: v1
+  kind: Namespace
+  metadata:
+    name: app2ns
+    labels:
+      name: app2ns
+
